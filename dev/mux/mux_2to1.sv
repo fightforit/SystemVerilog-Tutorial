@@ -1,5 +1,6 @@
 module mux_2to1 #(
-    parameter int BIT_WIDTH = 8
+    parameter int    BIT_WIDTH = 8,
+    parameter string method    = "conti"
 ) (
     input  logic                 sel_i,
     input  logic [BIT_WIDTH-1:0] a_i,
@@ -7,20 +8,22 @@ module mux_2to1 #(
     output logic [BIT_WIDTH-1:0] y_o
 );
 
-  // Continuous assignment
-  assign y = sel ? b : a;
-
-  // Procedural 1
-  always_comb begin
-    y = sel ? b : a;
-  end
-
-  // Procedural 2
-  always_comb begin
-    if (sel) begin
-      y = b;
-    end else begin
-      y = a;
+  if (method == "conti") begin
+    // Continuous assignment
+    assign y_o = sel_i ? b_i : a_i;
+  end else if (method == "proc1") begin
+    // Procedural 1
+    always_comb begin
+      y_o = sel_i ? b_i : a_i;
+    end
+  end else if (method == "proc2") begin
+    // Procedural 2
+    always_comb begin
+      if (sel_i) begin
+        y_o = b_i;
+      end else begin
+        y_o = a_i;
+      end
     end
   end
 
