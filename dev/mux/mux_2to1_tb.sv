@@ -7,13 +7,13 @@ module mux_2to1_tb ();
   logic                 sel_i;
   logic [BIT_WIDTH-1:0] y_o;
 
-  mux_2to1 #(
-      /* parameter int */.BIT_WIDTH(BIT_WIDTH)
-  ) u_mux_2to1 (
-      /* input  logic                 */.sel_i(sel_i),
-      /* input  logic [BIT_WIDTH-1:0] */.a_i  (a_i),
-      /* input  logic [BIT_WIDTH-1:0] */.b_i  (b_i),
-      /* output logic [BIT_WIDTH-1:0] */.y_o  (y_o)
+  mux_2to1_conti #(
+      .BIT_WIDTH(BIT_WIDTH)
+  ) u_mux_2to1_conti (
+      .sel_i(sel_i),
+      .a_i  (a_i),
+      .b_i  (b_i),
+      .y_o  (y_o)
   );
 
   initial begin

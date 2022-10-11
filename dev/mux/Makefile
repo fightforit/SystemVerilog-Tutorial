@@ -7,7 +7,7 @@ VCS_FLAGS       :=  -full64 -line -Mupdate +vc -sverilog +v2k \
 
 HIGHLIGHT = |& grep --color -iP "\^|Warning|Error|Offending|Lint|"
 
-SV_FILES        :=  mux_2to1.sv
+SV_FILES        :=  mux_2to1_conti.sv mux_2to1_proc1.sv mux_2to1_proc2.sv
 TB_FILES        :=  mux_2to1_tb.sv
 
 dont_rm         := Makefile *.sv
