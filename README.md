@@ -3,9 +3,9 @@ This a learning site for SystemVerilog. We would like to share our knowledge and
 
 We start with the basics of SystemVerilog and then move on to more advanced topics in the posts. You can find the posts and the source code here. The following is a list of the posts:
 
-| Post | Description | Github |
-| ---- | ----------- | ------ |
-| Post01 | [What is SystemVerilog](https://bitvector.dev/systemverilog-get-started-introduction/) |
-| Post02 | [Prerequisites](https://bitvector.dev/systemverilog-get-started-prerequisite/) |
+| Topic | Post | Description | Github |
+| ----- | ---- | ----------- | ------ |
+| Get Started | Post01 | [What is SystemVerilog](https://bitvector.dev/systemverilog-get-started-introduction/) |
+|             | Post02 | [Prerequisites](https://bitvector.dev/systemverilog-get-started-prerequisite/) |
 
 ... more to come
