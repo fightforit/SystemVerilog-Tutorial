@@ -1,9 +1,8 @@
-module mux_2to1_proc2 #(
-) (
-    input  logic       sel_i,
-    input  logic [7:0] a_i,
-    input  logic [7:0] b_i,
-    output logic [7:0] y_o
+module mux_2to1_proc2 (
+  input  logic       sel_i,
+  input  logic [7:0] a_i,
+  input  logic [7:0] b_i,
+  output logic [7:0] y_o
 );
 
   // Procedural 2
