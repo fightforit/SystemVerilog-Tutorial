@@ -1,11 +1,11 @@
 module mux_2to1 (
-  input  logic sel_i,
-  input  logic a_i,
-  input  logic b_i,
-  output logic y_o
+  input  logic iSel,
+  input  logic iA,
+  input  logic iB,
+  output logic oY
 );
 
   // Continuous assignment
-  assign y_o = sel_i ? b_i : a_i;
+  assign oY = iSel ? iB : iA;
 
 endmodule : mux_2to1
