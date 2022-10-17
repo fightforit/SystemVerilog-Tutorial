@@ -1,11 +1,11 @@
-module mux_2to1_tb ();
+module Mux2To1Tb ();
 
   logic iSel;
   logic iA;
   logic iB;
   logic oY;
 
-  mux_2to1 #() u_mux_2to1_conti (
+  Mux2To1 #() u_mux_2to1_conti (
     .iSel(iSel),
     .iA  (iA),
     .iB  (iB),
@@ -30,12 +30,12 @@ module mux_2to1_tb ();
 
   initial begin
 `ifdef VCS
-    $fsdbDumpfile("mux_2to1_tb.fsdb");
+    $fsdbDumpfile("Mux2To1Tb.fsdb");
     $fsdbDumpvars();
 `else
-    $dumpfile("mux_2to1_tb.vcd");
-    $dumpvars(0, mux_2to1_tb);
+    $dumpfile("Mux2To1Tb.vcd");
+    $dumpvars(0, Mux2To1Tb);
 `endif
   end
 
-endmodule : mux_2to1_tb
+endmodule : Mux2To1Tb
