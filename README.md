@@ -7,5 +7,6 @@ We start with the basics of SystemVerilog and then move on to more advanced topi
 | ----- | ---- | ----------- | ------ |
 | Get Started | Post01 | [What is SystemVerilog](https://bitvector.dev/systemverilog-get-started-introduction/) |
 |             | Post02 | [Prerequisites](https://bitvector.dev/systemverilog-get-started-prerequisite/) |
+|             | Post03 | [Tool Introduction for SystemVerilog](systemverilog-get-started-installation) |
 
 ... more to come

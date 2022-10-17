@@ -1,9 +1,9 @@
 module mux_2to1_tb ();
 
-  logic       sel_i;
-  logic [7:0] a_i;
-  logic [7:0] b_i;
-  logic [7:0] y_o;
+  logic sel_i;
+  logic a_i;
+  logic b_i;
+  logic y_o;
 
   mux_2to1 #() u_mux_2to1_conti (
     .sel_i(sel_i),
@@ -13,13 +13,18 @@ module mux_2to1_tb ();
   );
 
   initial begin
-    for (int i = 0; i < 10; i++) begin
-      a_i   = $urandom_range(0, 8'hFF);
-      b_i   = $urandom_range(0, 8'hFF);
-      sel_i = $urandom() % 2;
-      #10.0;
-      $display("a = %h, b = %h, sel = %h, y = %h", a_i, b_i, sel_i, y_o);
-    end
+    a_i   = 1'b0;
+    b_i   = 1'b1;
+    sel_i = 1'b0;
+    #10;
+    $display("a_i = %b, b_i = %b, sel_i = %b, y_o = %b", a_i, b_i, sel_i, y_o);
+
+    a_i   = 1'b0;
+    b_i   = 1'b1;
+    sel_i = 1'b1;
+    #10;
+    $display("a_i = %b, b_i = %b, sel_i = %b, y_o = %b", a_i, b_i, sel_i, y_o);
+
     $finish();
   end
 

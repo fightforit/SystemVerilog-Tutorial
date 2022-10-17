@@ -1,8 +1,8 @@
 module mux_2to1 (
-  input  logic       sel_i,
-  input  logic [7:0] a_i,
-  input  logic [7:0] b_i,
-  output logic [7:0] y_o
+  input  logic sel_i,
+  input  logic a_i,
+  input  logic b_i,
+  output logic y_o
 );
 
   // Continuous assignment
