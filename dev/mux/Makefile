@@ -13,7 +13,7 @@ VVP             := vvp
 
 HIGHLIGHT       := |& grep --color -iP "\^|Warning|Error|Offending|Lint|"
 
-SV_FILES        := mux_2to1.sv mux_2to1_proc1.sv mux_2to1_proc2.sv
+SV_FILES        := mux_2to1.sv
 TB_FILES        := mux_2to1_tb.sv
 
 dont_rm         := Makefile *.sv
