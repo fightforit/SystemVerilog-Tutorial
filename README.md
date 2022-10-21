@@ -8,6 +8,6 @@ We start with the basics of SystemVerilog and then move on to more advanced topi
 | Get Started | Post01 | [What is SystemVerilog](https://bitvector.dev/systemverilog-get-started-introduction/) |
 |             | Post02 | [Prerequisites](https://bitvector.dev/systemverilog-get-started-prerequisite/) |
 |             | Post03 | [Tool Introduction for SystemVerilog](https://bitvector.dev/systemverilog-get-started-installation/) |
-|             | Post04 | [Hello World](https://bitvector.dev/systemverilog-get-started-mux/) |
+|             | Post04 | [Multiplexer](https://bitvector.dev/systemverilog-get-started-mux/) |
 
 ... more to come
