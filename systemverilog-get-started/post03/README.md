@@ -1,3 +1,3 @@
 # Post 03
 
-SystemVerilog tool introduction: [post link](systemverilog-get-started-installation) (in Mandarin Chinese)
+SystemVerilog tool introduction: [post link](https://bitvector.dev/systemverilog-get-started-installation/) (in Mandarin Chinese)
