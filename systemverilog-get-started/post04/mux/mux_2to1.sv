@@ -1,4 +1,4 @@
-module mux_2to1 (
+module Mux2To1 (
     input  logic iSel,
     input  logic iData0,
     input  logic iData1,
@@ -8,4 +8,4 @@ module mux_2to1 (
   // Continuous assignment
   assign oData = iSel ? iData1 : iData0;
 
-endmodule : mux_2to1
+endmodule : Mux2To1
