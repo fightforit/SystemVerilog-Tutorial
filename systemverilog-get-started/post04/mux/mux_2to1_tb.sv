@@ -1,31 +1,31 @@
 module mux_2to1_tb;
 
-  logic sel_i;
-  logic a_i;
-  logic b_i;
-  logic y_o;
+  logic iSel;
+  logic iData0;
+  logic iData1;
+  logic oData;
 
   mux_2to1 u_mux_2to1_conti (
-    .sel_i(sel_i),
-    .a_i  (a_i),
-    .b_i  (b_i),
-    .y_o  (y_o)
+      .iSel  (iSel),
+      .iData0(iData0),
+      .iData1(iData1),
+      .oData (oData)
   );
 
   initial begin
     // Test 1
-    a_i   = 1'b0;
-    b_i   = 1'b1;
-    sel_i = 1'b0;
+    iData0 = 1'b0;
+    iData1 = 1'b1;
+    iSel   = 1'b0;
     #10ns;
-    $display("a_i=%b, b_i=%b, sel_i=%b, y_o=%b", a_i, b_i, sel_i, y_o);
+    $display("iData0=%b, iData1=%b, iSel=%b, oData=%b", iData0, iData1, iSel, oData);
 
     // Test 2
-    a_i   = 1'b0;
-    b_i   = 1'b1;
-    sel_i = 1'b1;
+    iData0 = 1'b0;
+    iData1 = 1'b1;
+    iSel   = 1'b1;
     #10ns;
-    $display("a_i=%b, b_i=%b, sel_i=%b, y_o=%b", a_i, b_i, sel_i, y_o);
+    $display("iData0=%b, iData1=%b, iSel=%b, oData=%b", iData0, iData1, iSel, oData);
 
     $finish(0);
   end
