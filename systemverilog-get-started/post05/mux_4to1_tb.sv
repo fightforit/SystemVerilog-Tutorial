@@ -1,43 +1,43 @@
 module Mux4To1TB;
 
-  logic [1:0] iSel;
-  logic iData0;
-  logic iData1;
-  logic iData2;
-  logic iData3;
-  logic oData;
+  logic [1:0] Sel;
+  logic Data0;
+  logic Data1;
+  logic Data2;
+  logic Data3;
+  logic Data;
 
 
   Mux4To1 u_mux_4_to_1 (
-      .iSel  (iSel),
-      .iData0(iData0),
-      .iData1(iData1),
-      .iData2(iData2),
-      .iData3(iData3),
-      .oData (oData)
+      .iSel  (Sel),
+      .iData0(Data0),
+      .iData1(Data1),
+      .iData2(Data2),
+      .iData3(Data3),
+      .oData (Data)
   );
 
 
   initial begin
     // Test 1
-    iData0 = 1'b0;
-    iData1 = 1'b1;
-    iData2 = 1'b1;
-    iData3 = 1'b0;
-    iSel   = 2'b00;
+    Data0 = 1'b0;
+    Data1 = 1'b1;
+    Data2 = 1'b1;
+    Data3 = 1'b0;
+    Sel   = 2'b00;
     #10ns;
-    $display("iData0=%b, iData1=%b, iData2=%b, iData3=%b, iSel=%02b, oData=%b", iData0, iData1,
-             iData2, iData3, iSel, oData);
+    $display("Data0=%b, Data1=%b, Data2=%b, Data3=%b, Sel=%02b, Data=%b", Data0, Data1, Data2,
+             Data3, Sel, Data);
 
     // Test 2
-    iData0 = 1'b0;
-    iData1 = 1'b1;
-    iData2 = 1'b1;
-    iData3 = 1'b0;
-    iSel   = 2'b01;
+    Data0 = 1'b0;
+    Data1 = 1'b1;
+    Data2 = 1'b1;
+    Data3 = 1'b0;
+    Sel   = 2'b01;
     #10ns;
-    $display("iData0=%b, iData1=%b, iData2=%b, iData3=%b, iSel=%02b, oData=%b", iData0, iData1,
-             iData2, iData3, iSel, oData);
+    $display("Data0=%b, Data1=%b, Data2=%b, Data3=%b, Sel=%02b, Data=%b", Data0, Data1, Data2,
+             Data3, Sel, Data);
 
     $finish(0);
   end
