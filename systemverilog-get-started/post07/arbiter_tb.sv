@@ -13,7 +13,7 @@ module ArbiterTB;
 
   initial begin
     for (int i = 0; i < N; i++) begin
-      request = $random();
+      request = $urandom();
 
       #10ns;
       $display("Request = %b, Grant = %b", request, grant);
