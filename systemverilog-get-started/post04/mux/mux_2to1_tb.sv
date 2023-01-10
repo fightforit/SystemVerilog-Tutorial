@@ -1,31 +1,31 @@
 module Mux2To1TB;
 
-  logic iSel;
-  logic iData0;
-  logic iData1;
-  logic oData;
+  logic sel;
+  logic data0;
+  logic data1;
+  logic data;
 
   Mux2To1 u_mux_2to1_conti (
-      .iSel  (iSel),
-      .iData0(iData0),
-      .iData1(iData1),
-      .oData (oData)
+      .iSel  (sel),
+      .iData0(data0),
+      .iData1(data1),
+      .oData (data)
   );
 
   initial begin
     // Test 1
-    iData0 = 1'b0;
-    iData1 = 1'b1;
-    iSel   = 1'b0;
+    data0 = 1'b0;
+    data1 = 1'b1;
+    sel   = 1'b0;
     #10ns;
-    $display("iData0=%b, iData1=%b, iSel=%b, oData=%b", iData0, iData1, iSel, oData);
+    $display("data0=%b, data1=%b, sel=%b, data=%b", data0, data1, sel, data);
 
     // Test 2
-    iData0 = 1'b0;
-    iData1 = 1'b1;
-    iSel   = 1'b1;
+    data0 = 1'b0;
+    data1 = 1'b1;
+    sel   = 1'b1;
     #10ns;
-    $display("iData0=%b, iData1=%b, iSel=%b, oData=%b", iData0, iData1, iSel, oData);
+    $display("data0=%b, data1=%b, sel=%b, data=%b", data0, data1, sel, data);
 
     $finish(0);
   end
